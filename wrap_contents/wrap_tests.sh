@@ -51,6 +51,9 @@ $header = "${2}_header.html"
 $footer = "${2}_footer.html"
 $target = $3
 
+# Concatenate contents into target files
+(cat $header $content $footer | cat >$target)
+
 # If this test fails, your script file doesn't exist, or there's
 # a typo in the name, or it's in the wrong directory, etc.
 @test "wrap_contents.sh exists" {

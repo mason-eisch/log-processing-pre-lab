@@ -1,10 +1,9 @@
-#! usr/bin/bash
+#! /usr/bin/bash
 
 # Declare key variables using arguments
-$content = $1
-$header = "${2}_header.html"
-$footer = "${2}_footer.html"
-$target = $3
+header = "${2}_header.html"
+footer = "${2}_footer.html"
+
 
 # Concatenate contents into target files
-(cat $header $content $footer | cat >$target)
+(cat $header $1 $footer) >>$3
